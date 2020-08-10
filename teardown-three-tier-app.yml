@@ -45,6 +45,7 @@
   vars:
     tomcat_packages:
       - tomcat
+      - java
     tomcat_port: 8080    
     tomcat_service: tomcat
 
@@ -62,7 +63,6 @@
       file:
         path: /usr/share/tomcat
         state: absent
-
 
 - name: Teardown haproxy load balancer
   hosts: load_balancers
